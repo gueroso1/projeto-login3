@@ -22,7 +22,7 @@ body {
 
 main {
     width: 100vw;
-    height: 750px;
+    height: 770px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,6 +50,33 @@ h1 {
 
 .social a:first-child img {
     margin-left: 0px;
+}
+
+main .or {
+    margin: 1rem;
+    font-weight: 400;
+    color: rgb(255, 255, 255, .3);
+    position: relative;
+}
+
+.or::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    background-color: rgb(255, 255, 255, .3);
+    bottom: 50%;
+    right: 50px;
+}
+
+.or::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    background-color: rgb(255, 255, 255, .3);
+    bottom: 50%;
+    left: 50px;
 }
 
 main form {
@@ -99,4 +126,67 @@ main form input[type="submit"]:hover {
 
 section > img {
     display: none;
+}
+
+@media screen and (min-width: 1600px) {
+    main {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    section {
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        padding: 6rem;
+    }
+
+    section > img {
+        display: block;  
+        width: 600px;  
+    }
+
+    .circle {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(45deg, #e8cbc0, #636fa4);
+        clip-path: circle(30% at right 80%);
+        z-index: -1;
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width:1600px) {
+
+    main {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    section {
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        padding: 2rem;
+    }
+
+    section > img {
+        display: block;  
+        width: 600px;  
+    }
+
+    .circle {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(45deg, #e8cbc0, #636fa4);
+        clip-path: circle(30% at right 70%);
+        z-index: -1;
+    }
 }
